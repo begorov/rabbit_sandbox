@@ -4,11 +4,31 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var amqp = require('amqp');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+
+//todo
+//how to monitor ?
+
+//var connection = amqp.createConnection();
+//
+//connection.on('ready', function () {
+//  // Use the default 'amq.topic' exchange
+//  connection.queue('my-queue', function (q) {
+//    // Catch all messages
+//    q.bind('#');
+//
+//    // Receive messages
+//    q.subscribe(function (message) {
+//      // Print messages to stdout
+//      console.log(message);
+//    });
+//  });
+//});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
