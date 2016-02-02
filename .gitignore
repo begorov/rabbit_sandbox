@@ -1,0 +1,13 @@
+/node_modules/
+/.idea/
+
+terraform.tfstate.backup
+
+/.envrc
+/.vagrant
+/ansible/ca/yippie_nl.key
+/terraform/.envrc
+/terraform/ssh/deploy
+
+# `frontend` generates `public`
+/public/
